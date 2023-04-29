@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PassTheExam.MainPage">
+
+    <ContentView SizeChanged="ContentView_SizeChanged">
+        <Grid x:Name="uiGrid" ColumnSpacing="1" RowSpacing="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="7*"/>
+                <RowDefinition Height="3*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <StackLayout x:Name="infoStack" Grid.Row="0" Grid.Column="1">
+                <Label Text="Оставащи бомби: 10" x:Name="bombsLeftLabel" />
+                <Label Text="Едно натискане маркиране за двойка" />
+                <Label Text="Две натискания отвори" />
+            </StackLayout>
+            <ContentView Grid.Row="1" Grid.Column="1">
+                <Grid x:Name="gameGrid">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                </Grid>                
+            </ContentView>
+        </Grid>
+    </ContentView>
+</ContentPage>
